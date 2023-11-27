@@ -33,7 +33,7 @@ const Player = () => {
 	}, [])
 
 	return (
-		<div className='flex items-center justify-between bg-pink-500 px-10 py-5 mt-10'>
+		<div className='flex items-center justify-between bg-pink-500 px-10 py-5 mt-10 xs:block'>
 			<div className='flex items-center gap-5'>
 				{isPlaying ? (
 					<MdPause
@@ -49,12 +49,16 @@ const Player = () => {
 					/>
 				)}
 				<img className='w-14 rounded-md' src={preview} alt={preview} />
+				<div>
+					<div>
+						<b>{artists}</b>
+					</div>
+					<div>
+						<i>{title}</i>
+					</div>
+				</div>
 			</div>
-			<div className='flex gap-3'>
-				<b className='text-black'>{artists}</b> -
-				<i className='text-black'>{title}</i>
-			</div>
-			<div className='flex gap-5 w-1/2'>
+			<div className='flex gap-5 w-1/2 xs:mt-10 xs:w-full'>
 				<div>{startTime}</div>
 				<Slider
 					defaultValue={30}

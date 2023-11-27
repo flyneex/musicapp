@@ -10,7 +10,7 @@ const App = () => {
 	return (
 		<div className='flex flex-col justify-around items-center w-screen'>
 			<Search setTracks={setTracks} />
-			<div className='w-1/2'>
+			<div className='w-3/4 xs:w-full xs:px-5'>
 				{tracks.map(track => (
 					<Track key={track.id} {...track} />
 				))}
